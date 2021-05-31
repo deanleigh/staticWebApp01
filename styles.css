@@ -9,13 +9,10 @@ html, body {
   background-color: #fff;
 }
 
-main {
+.page {
   margin: auto;
   width: 50%;
   padding: 20px;
+  outline: 1px solid #999;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
-}
