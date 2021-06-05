@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Project 02 - Toggle multiple password fields</title>
+</head>
+
+<body>
+    <header class="page">
+        <h1>Project 02 - Toggle multiple password fields</h1>
+        <p>Hopefully I can use this staic web app for storing JS tutorials</p>
+    </header>
+    <main class="page">
+        <form>
+            <div>
+                <label for="current-password">Current Password</label>
+                <input type="password" name="current-password" id="current-password">
+            </div>
+
+            <div>
+                <label for="new-password">New Password</label>
+                <input type="password" name="new-password" id="new-password">
+            </div>
+
+            <div>
+                <label for="show-passwords">
+                    <input type="checkbox" name="show-passwords" id="show-passwords">
+                    Show passwords
+                </label>
+            </div>
+
+            <p>
+                <button type="submit">Change Passwords</button>
+            </p>
+        </form>
+    </main>
+    <footer class="page"><a href="/index.html">Back to list</a></footer>
+
+    <script>
+        const show = document.querySelector(`#show-passwords`);
+        // const currentPassword = document.querySelector(`#current-password`);
+        // const newPassword = document.querySelector(`#new-password`);
+        const passwords = document.querySelectorAll(`[type="password"]`);
+        console.log(passwords);
+
+        show.addEventListener(`click`, function () {
+
+
+            // Loop through each password field
+            for (let password of passwords) {
+
+                if (show.checked) {
+                    passwords.type = `text`;
+                    console.log("checked");
+                }
+                else
+                    passwords.type = `password`;
+                    console.log("unchecked");
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>
