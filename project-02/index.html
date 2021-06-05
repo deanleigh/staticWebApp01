@@ -40,28 +40,25 @@
     <footer class="page"><a href="/index.html">Back to list</a></footer>
 
     <script>
-        const show = document.querySelector(`#show-passwords`);
-        // const currentPassword = document.querySelector(`#current-password`);
-        // const newPassword = document.querySelector(`#new-password`);
         const passwords = document.querySelectorAll(`[type="password"]`);
         console.log(passwords);
+        const show = document.querySelector(`#show-passwords`);
+
+        // const currentPassword = document.querySelector(`#current-password`);
+        // const newPassword = document.querySelector(`#new-password`);
 
         show.addEventListener(`click`, function () {
-
-
             // Loop through each password field
             for (let password of passwords) {
 
                 if (show.checked) {
-                    passwords.type = `text`;
+                    password.type = `text`;
                     console.log("checked");
                 }
                 else
-                    passwords.type = `password`;
+                    password.type = `password`;
                     console.log("unchecked");
             }
-
-
         });
     </script>
 </body>
