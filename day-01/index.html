@@ -39,7 +39,16 @@
     <footer class="page"><a href="/index.html">Back to list</a></footer>
 
     <script>
-        const 
+        const show = document.querySelector(`#show-password`);
+        const password = document.querySelector(`#password`);
+
+        show.addEventListener(`click`, function() {
+            if (show.checked) {
+                password.type = `text`;
+            }
+            else
+                password.type = `password`;
+        });
     </script>
 </body>
 
