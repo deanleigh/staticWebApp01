@@ -15,28 +15,58 @@
         <p>Both have password fields in them, and for each form, we again want to include a checkbox that let’s the user toggle password visibility on or off. But, each checkbox should only toggle the fields in its own form.</p>
     </header>
     <main class="page">
-        <form>
-            <div>
-                <label for="current-password">Current Password</label>
-                <input type="password" name="current-password" id="current-password">
-            </div>
+        <h2>Change Username</h2>
+<p>Enter your username and password to change your username.</p>
 
-            <div>
-                <label for="new-password">New Password</label>
-                <input type="password" name="new-password" id="new-password">
-            </div>
+<form>
+	<div>
+		<label for="username">Username</label>
+		<input type="text" name="username" id="username">
+	</div>
 
-            <div>
-                <label for="show-passwords">
-                    <input type="checkbox" name="show-passwords" id="show-passwords">
-                    Show passwords
-                </label>
-            </div>
+	<div>
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password">
+	</div>
 
-            <p>
-                <button type="submit">Change Passwords</button>
-            </p>
-        </form>
+	<div>
+		<label for="show-password">
+			<input type="checkbox" name="show-password" id="show-password">
+			Show password
+		</label>
+	</div>
+
+	<p>
+		<button type="submit">Change Username</button>
+	</p>
+</form>
+
+
+<h2>Change Password</h2>
+<p>Enter your current password and new password below.</p>
+
+<form>
+	<div>
+		<label for="current-password">Current Password</label>
+		<input type="password" name="current-password" id="current-password">
+	</div>
+
+	<div>
+		<label for="new-password">New Password</label>
+		<input type="password" name="new-password" id="new-password">
+	</div>
+
+	<div>
+		<label for="show-passwords">
+			<input type="checkbox" name="show-passwords" id="show-passwords">
+			Show passwords
+		</label>
+	</div>
+
+	<p>
+		<button type="submit">Change Passwords</button>
+	</p>
+</form>
     </main>
     <footer class="page"><a href="/index.html">Back to list</a></footer>
 
