@@ -60,7 +60,7 @@
 
 			<div>
 				<label for="show-passwords">
-					<input type="checkbox" name="show-passwords" id="show-passwords" data-pw-toggle="#current-password, #new-password">
+					<input type="checkbox" name="show-passwords" id="show-passwords" data-pw-toggle="#current-password #new-password">
 					Show passwords
 				</label>
 			</div>
@@ -79,7 +79,7 @@
 				if (!event.target.matches('[data-pw-toggle]')) return;
 
 				// Get the password fields
-				let selector = event.target.getAttribute('data-pw-toggle');
+				let selector = event.target.getAttribute('data-pw-toggle').replaceAll(' ', ',');
 				let passwords = document.querySelectorAll(selector);
 
 				// Loop through each password field
