@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/index.css">
+	<title>Project 5 - Character Count</title>
+</head>
+
+<body>
+	<header class="page">
+		<h1>Project 5 - Character and Word Count</h1>
+		<p>In today’s project, we’re going to modify our character count script to also count the number of words in a
+			block of text. We’ll again do this in real time as the user types or pastes content in.</p>
+	</header>
+
+
+	<main class="page">
+		<label for="text">Enter your text below.</label>
+		<textarea id="text"></textarea>
+
+		<p>You've written <strong><span id="word-count">0</span> words</strong> and <strong><span
+					id="character-count">0</span> characters</strong>.</p>
+	</main>
+
+
+	<footer class="page"><a href="/index.html">Back to list</a></footer>
+
+	<script>
+
+		const text = document.querySelector(`#text`);
+		const characterCount = document.querySelector(`#character-count`);
+		const wordCount = document.querySelector(`#word-count`);
+
+		//console.log(input.textContent);
+		//console.log(input.innerText);
+
+		text.addEventListener('input', function () {
+
+			// Get the word count
+			let words = text.value.split(/[\s]+/g).filter(function (word) {
+				return word.length;
+			});
+
+			// Display the word count
+			wordCount.textContent = words.length;
+
+			// Display the characters count
+			characterCount.textContent = text.value.length;
+
+		});
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>
