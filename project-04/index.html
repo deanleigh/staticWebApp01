@@ -20,7 +20,7 @@
 		<label for="text">Enter your text below.</label>
 		<textarea id="text"></textarea>
 
-		<p>You've written <strong><span id="character-count">0</span> characters</strong>.</p>
+		<p class="output">You've written <strong><span id="character-count">0</span> characters</strong>.</p>
 	</main>
 
 
@@ -28,9 +28,21 @@
 
 	<script>
 
-let content = text.innerText;
+		const input = document.querySelector(`#text`);
+		const output = document.querySelector(`#character-count`);
 
-console.log(content);
+		//console.log(input.textContent);
+		//console.log(input.innerText);
+
+		input.addEventListener(`input`, function () {
+		//console.log(input.textContent);
+		output.textContent = text.value.length;
+		//output.textContent = "textContent";
+		});
+
+		
+
+		
 
 
 
@@ -38,4 +50,3 @@ console.log(content);
 </body>
 
 </html>
-
